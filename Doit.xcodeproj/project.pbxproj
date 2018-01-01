@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B641FE7F1FFADDB200F57213 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641FE7E1FFADDB200F57213 /* task.swift */; };
 		B6CEBDA01FFA6FE400060217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CEBD9F1FFA6FE400060217 /* AppDelegate.swift */; };
 		B6CEBDA21FFA6FE400060217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CEBDA11FFA6FE400060217 /* ViewController.swift */; };
 		B6CEBDA51FFA6FE400060217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CEBDA31FFA6FE400060217 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B641FE7E1FFADDB200F57213 /* task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 		B6CEBD9C1FFA6FE400060217 /* Doit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CEBD9F1FFA6FE400060217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CEBDA11FFA6FE400060217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				B6CEBD9F1FFA6FE400060217 /* AppDelegate.swift */,
 				B6CEBDA11FFA6FE400060217 /* ViewController.swift */,
+				B641FE7E1FFADDB200F57213 /* task.swift */,
 				B6CEBDA31FFA6FE400060217 /* Main.storyboard */,
 				B6CEBDA91FFA6FE400060217 /* Assets.xcassets */,
 				B6CEBDAB1FFA6FE400060217 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B641FE7F1FFADDB200F57213 /* task.swift in Sources */,
 				B6CEBDA21FFA6FE400060217 /* ViewController.swift in Sources */,
 				B6CEBDA01FFA6FE400060217 /* AppDelegate.swift in Sources */,
 				B6CEBDA81FFA6FE400060217 /* Doit.xcdatamodeld in Sources */,
@@ -301,6 +305,7 @@
 				B6CEBDB31FFA6FE400060217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
