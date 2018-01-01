@@ -31,7 +31,13 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     let cell = UITableViewCell()
       print("Tasks: \(indexPath.row)")
     let task = tasks[indexPath.row]
-    cell.textLabel?.text = task.name
+    
+    if task.important {
+      cell.textLabel?.text = "❗️\(task.name)"
+    } else {
+      cell.textLabel?.text = task.name
+    }
+   
     return cell
     
   }
