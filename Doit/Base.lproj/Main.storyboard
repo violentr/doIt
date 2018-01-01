@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="jWV-r5-JN1">
             <objects>
-                <viewController id="xl4-Sa-P8y" sceneMemberID="viewController">
+                <viewController id="xl4-Sa-P8y" customClass="CreateTaskViewController" customModule="Doit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bqx-IV-UTo"/>
                         <viewControllerLayoutGuide type="bottom" id="QTZ-sL-8iv"/>
@@ -64,7 +64,46 @@
                     <view key="view" contentMode="scaleToFill" id="w7I-NK-xKG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIn-hu-1Bc">
+                                <rect key="frame" x="163" y="79" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JS-10-TmD">
+                                <rect key="frame" x="56" y="110" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-ua-d7g">
+                                <rect key="frame" x="147" y="175" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U0n-46-EcK">
+                                <rect key="frame" x="164" y="226" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59W-rI-o1L">
+                                <rect key="frame" x="171" y="304" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="59W-rI-o1L" firstAttribute="top" secondItem="U0n-46-EcK" secondAttribute="bottom" constant="47" id="28v-XI-4vg"/>
+                            <constraint firstItem="wIn-hu-1Bc" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" id="3Wf-y3-V7c"/>
+                            <constraint firstItem="U0n-46-EcK" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" constant="1" id="E8Z-ZF-JMd"/>
+                            <constraint firstItem="HKY-ua-d7g" firstAttribute="top" secondItem="7JS-10-TmD" secondAttribute="bottom" constant="35" id="Vfi-5l-hEm"/>
+                            <constraint firstItem="wIn-hu-1Bc" firstAttribute="top" secondItem="bqx-IV-UTo" secondAttribute="bottom" constant="15" id="aKk-Zs-Hsr"/>
+                            <constraint firstItem="7JS-10-TmD" firstAttribute="leading" secondItem="w7I-NK-xKG" secondAttribute="leadingMargin" constant="40" id="ezh-ht-stB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7JS-10-TmD" secondAttribute="trailing" constant="40" id="iQ4-kp-WrR"/>
+                            <constraint firstItem="HKY-ua-d7g" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" id="lEl-1a-lOp"/>
+                            <constraint firstItem="7JS-10-TmD" firstAttribute="top" secondItem="wIn-hu-1Bc" secondAttribute="bottom" constant="10" id="oiV-HM-g2J"/>
+                            <constraint firstItem="U0n-46-EcK" firstAttribute="top" secondItem="HKY-ua-d7g" secondAttribute="bottom" constant="30" id="xkP-He-J1c"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wan-Zr-zbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
