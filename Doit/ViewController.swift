@@ -63,6 +63,10 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
   @IBAction func addTask(_ sender: Any?) {
     performSegue(withIdentifier: "addTaskSegue", sender: nil)
   }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let nextVC = segue.destination as! CreateTaskViewController
+    nextVC.previousVC = self
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

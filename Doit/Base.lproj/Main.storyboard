@@ -86,25 +86,33 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U0n-46-EcK">
                                 <rect key="frame" x="164" y="226" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59W-rI-o1L">
-                                <rect key="frame" x="171" y="304" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-iT-xn7">
+                                <rect key="frame" x="173" y="292" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="xl4-Sa-P8y" eventType="touchUpInside" id="GAa-Ce-plO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="59W-rI-o1L" firstAttribute="top" secondItem="U0n-46-EcK" secondAttribute="bottom" constant="47" id="28v-XI-4vg"/>
                             <constraint firstItem="wIn-hu-1Bc" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" id="3Wf-y3-V7c"/>
                             <constraint firstItem="U0n-46-EcK" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" constant="1" id="E8Z-ZF-JMd"/>
+                            <constraint firstItem="Hmz-iT-xn7" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" id="PXH-eA-kAE"/>
                             <constraint firstItem="HKY-ua-d7g" firstAttribute="top" secondItem="7JS-10-TmD" secondAttribute="bottom" constant="35" id="Vfi-5l-hEm"/>
                             <constraint firstItem="wIn-hu-1Bc" firstAttribute="top" secondItem="bqx-IV-UTo" secondAttribute="bottom" constant="15" id="aKk-Zs-Hsr"/>
                             <constraint firstItem="7JS-10-TmD" firstAttribute="leading" secondItem="w7I-NK-xKG" secondAttribute="leadingMargin" constant="40" id="ezh-ht-stB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7JS-10-TmD" secondAttribute="trailing" constant="40" id="iQ4-kp-WrR"/>
                             <constraint firstItem="HKY-ua-d7g" firstAttribute="centerX" secondItem="w7I-NK-xKG" secondAttribute="centerX" id="lEl-1a-lOp"/>
                             <constraint firstItem="7JS-10-TmD" firstAttribute="top" secondItem="wIn-hu-1Bc" secondAttribute="bottom" constant="10" id="oiV-HM-g2J"/>
+                            <constraint firstItem="Hmz-iT-xn7" firstAttribute="top" secondItem="U0n-46-EcK" secondAttribute="bottom" constant="35" id="x1C-Bf-nbQ"/>
                             <constraint firstItem="U0n-46-EcK" firstAttribute="top" secondItem="HKY-ua-d7g" secondAttribute="bottom" constant="30" id="xkP-He-J1c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="U0n-46-EcK" id="6ug-77-Tk8"/>
+                        <outlet property="taskNameTextField" destination="7JS-10-TmD" id="uFS-Bu-5iG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wan-Zr-zbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
