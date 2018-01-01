@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TaskViewController.swift
 //  Doit
 //
 //  Created by den on 01/01/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
+class TaskViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
 
 
   
