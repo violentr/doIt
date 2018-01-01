@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
 
+
+  
   @IBOutlet weak var taskList: UITableView!
   var tasks: [Task] = []
   
@@ -29,7 +31,7 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-      print("Tasks: \(indexPath.row)")
+      
     let task = tasks[indexPath.row]
     
     if task.important {
@@ -58,6 +60,9 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     
   }
   
+  @IBAction func addTask(_ sender: Any?) {
+    performSegue(withIdentifier: "addTaskSegue", sender: nil)
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
