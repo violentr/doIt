@@ -27,6 +27,7 @@ class CreateTaskViewController: UIViewController {
      task.important = importantSwitch.isOn
      previousVC.tasks.append(task)
      previousVC.taskList.reloadData()
+    navigationController!.popViewController(animated: true)
   }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
