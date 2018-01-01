@@ -37,6 +37,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Do it" id="rOP-cF-7na">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LFY-s0-fnu"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IeG-ug-73G">
                             <connections>
                                 <action selector="addTask:" destination="BYZ-38-t0r" id="BNP-Aa-dVH"/>
