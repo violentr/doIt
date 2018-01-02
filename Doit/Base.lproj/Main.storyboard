@@ -47,11 +47,62 @@
                     <connections>
                         <outlet property="taskList" destination="5Mo-Kj-Lmo" id="mb5-bS-mwr"/>
                         <segue destination="xl4-Sa-P8y" kind="show" identifier="addTaskSegue" id="7HG-7Z-cie"/>
+                        <segue destination="lVW-Xv-Nii" kind="show" identifier="selectTaskSegue" id="QZQ-Lf-IIR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Compleate Task View Controller-->
+        <scene sceneID="HTg-R1-bmX">
+            <objects>
+                <viewController id="lVW-Xv-Nii" customClass="CompleateTaskViewController" customModule="Doit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X7A-pa-QRt"/>
+                        <viewControllerLayoutGuide type="bottom" id="3AP-bZ-QwI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pXs-1d-d4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrT-To-djD">
+                                <rect key="frame" x="157" y="-66" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gt-eK-wzS">
+                                <rect key="frame" x="157" y="80" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-4N-q45">
+                                <rect key="frame" x="154" y="148" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="lVW-Xv-Nii" eventType="touchUpInside" id="OOd-Z1-w04"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DrT-To-djD" firstAttribute="centerX" secondItem="pXs-1d-d4b" secondAttribute="centerX" id="8dB-eN-5ec"/>
+                            <constraint firstItem="3AP-bZ-QwI" firstAttribute="top" secondItem="XSR-4N-q45" secondAttribute="bottom" constant="489" id="ACn-Q2-9ya"/>
+                            <constraint firstItem="XSR-4N-q45" firstAttribute="centerX" secondItem="pXs-1d-d4b" secondAttribute="centerX" id="UQz-sB-lSJ"/>
+                            <constraint firstItem="0Gt-eK-wzS" firstAttribute="top" secondItem="pXs-1d-d4b" secondAttribute="top" constant="80" id="Wgj-Kw-iZw"/>
+                            <constraint firstItem="XSR-4N-q45" firstAttribute="top" secondItem="0Gt-eK-wzS" secondAttribute="bottom" constant="38" id="X90-q2-9QG"/>
+                            <constraint firstItem="0Gt-eK-wzS" firstAttribute="centerX" secondItem="pXs-1d-d4b" secondAttribute="centerX" id="cTE-IO-Tm2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="0Gt-eK-wzS" id="5ZQ-ob-Xf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiJ-If-uwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599.2" y="834.33283358320841"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="jWV-r5-JN1">

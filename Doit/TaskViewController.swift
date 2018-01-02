@@ -14,6 +14,7 @@ class TaskViewController: UIViewController,  UITableViewDataSource, UITableViewD
   
   @IBOutlet weak var taskList: UITableView!
   var tasks: [Task] = []
+  var selectedIndex = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,7 +34,7 @@ class TaskViewController: UIViewController,  UITableViewDataSource, UITableViewD
     let cell = UITableViewCell()
       
     let task = tasks[indexPath.row]
-    
+    selectedIndex = indexPath.row
     if task.important {
       cell.textLabel?.text = "❗️\(task.name)"
     } else {
@@ -43,6 +44,12 @@ class TaskViewController: UIViewController,  UITableViewDataSource, UITableViewD
     return cell
     
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let task = tasks[indexPath.row]
+    performSegue(withIdentifier: "selectTaskSegue", sender: task)
+  }
+  
   func makeTasks() -> [Task] {
     let task1 = Task()
     task1.name = "Walk the dog"
@@ -64,8 +71,15 @@ class TaskViewController: UIViewController,  UITableViewDataSource, UITableViewD
     performSegue(withIdentifier: "addTaskSegue", sender: nil)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let nextVC = segue.destination as! CreateTaskViewController
-    nextVC.previousVC = self
+    if segue.identifier == "addTaskSegue" {
+      let nextVC = segue.destination as! CreateTaskViewController
+      nextVC.previousVC = self
+    }
+    if segue.identifier == "selectTaskSegue" {
+      let nextVC = segue.destination as! CompleateTaskViewController
+      nextVC.task = sender as! Task
+      nextVC.previousVC = self
+    }
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
